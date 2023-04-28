@@ -1,0 +1,24 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.not-found button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  gap: 8px;
+  border: none;
+  width: 141px;
+  height: 48px;
+  color: white;
+  background: #4094ef;
+  border-radius: 12px;
+}

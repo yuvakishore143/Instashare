@@ -1,0 +1,167 @@
+.desktop-view {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.dropDown-cont {
+  display: none;
+}
+.dropDown-cont-show {
+  display: block;
+}
+
+.header-first-part {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(-10px);
+}
+
+.header-first-part h1 {
+  font-size: 18px;
+  transform: translateY(5px);
+  font-weight: normal;
+}
+
+.header-logo {
+  width: 55px;
+  height: 28px;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  width: 100%;
+}
+
+.burger-icon {
+  font-size: 23px;
+}
+
+.header-logo-cont {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transform: translateY(10px);
+}
+.header-logo-cont h1 {
+  text-decoration: none;
+  color: red;
+  list-style: none;
+}
+
+.logout-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  border: none;
+  width: 86px;
+  height: 32px;
+  border-radius: 5px;
+  color: white;
+  background: #4094ef;
+}
+
+.mobile-view {
+  border: none;
+  background-color: transparent;
+}
+
+.close-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.mo .close-icon {
+  font-size: 16px;
+}
+
+.mobile-search-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.header-search-cont {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #dbdbdb;
+  height: 40px;
+  border: 2px solid #dbdbdb;
+  width: 270px;
+  border-radius: 5px;
+  margin: auto;
+}
+.header-search-cont input {
+  border: none;
+  height: 100%;
+  padding: 0px 10px;
+  width: 225px;
+}
+
+.header-search-btn {
+  background-color: transparent;
+  border: none;
+  transform: translate(14px, 2px);
+}
+
+.mobile-search-cont {
+  display: none;
+}
+
+.mobile-search-cont-show {
+  display: block;
+}
+
+.header-links {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  color: blue;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-icon {
+    display: none;
+  }
+
+  .header {
+    justify-content: space-around;
+  }
+
+  .desktop-view {
+    display: inline;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-search-btn {
+    background-color: transparent;
+    border: none;
+    transform: translate(4px, 2px);
+  }
+
+  .header-search-cont {
+    width: 250px;
+    margin: 0px;
+  }
+  .header-search-cont input {
+    width: 205px;
+  }
+  .mobile-search-cont {
+    display: none;
+  }
+}

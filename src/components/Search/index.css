@@ -1,0 +1,10 @@
+.search-page {
+  width: 80%;
+  margin: auto;
+}
+
+.search-page h1 {
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: normal;
+}

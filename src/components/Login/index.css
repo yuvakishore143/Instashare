@@ -1,0 +1,96 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-min-page {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+.login-first-cont {
+  display: none;
+}
+
+.login-second-cont {
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 350px;
+}
+
+.login-second-min-cont {
+  width: 312px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+.login-logo-cont {
+  width: 250px;
+  align-self: center;
+  margin: 0px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-logo {
+  width: 120px;
+  padding-bottom: 10px;
+}
+
+.login-logo-cont h1 {
+  font-size: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-credential-box label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px;
+}
+.login-credential-box input {
+  display: block;
+  border: none;
+  background-color: #eeeeee;
+  height: 40px;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.login-form button {
+  background: #4094ef;
+  border-radius: 8px;
+  border: none;
+  height: 40px;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.err {
+  color: red;
+  margin: -5px 0px -20px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .login-first-cont {
+    display: flex;
+  }
+}

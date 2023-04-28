@@ -1,0 +1,38 @@
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-search-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  flex-direction: column;
+}
+
+.no-search-found img {
+  width: 80%;
+}
+
+.search-heading {
+  font-size: 18px;
+  margin: 20px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-page {
+  }
+  .home-min-page {
+    margin: auto;
+  }
+  .no-search-found img {
+    width: 400px;
+  }
+  .home-body {
+    width: 80%;
+    margin: auto;
+  }
+}

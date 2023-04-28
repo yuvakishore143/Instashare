@@ -1,0 +1,34 @@
+.failure-page {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.failure-page img {
+  width: 100%;
+}
+
+.failure-page p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.failure-page button {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  border: none;
+  width: 130px;
+  height: 40px;
+  justify-content: center;
+  color: white;
+  background: #4094ef;
+  border-radius: 8px;
+}

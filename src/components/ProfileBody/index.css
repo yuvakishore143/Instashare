@@ -1,0 +1,161 @@
+.profile-body {
+  margin: 10px 0px;
+}
+
+.profile-img-cont img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 18px;
+  margin: 20px 10px;
+  color: #262626;
+  font-family: roboto;
+  font-weight: normal;
+  letter-spacing: 1.4px;
+}
+
+.profile-first-cont {
+  display: flex;
+  margin: 30px 10px;
+}
+
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-first-cont ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.data-lists li {
+  list-style: none;
+  text-align: center;
+}
+
+.data-lists li p span {
+  font-weight: bold;
+  display: block;
+}
+
+.data-lists li {
+  display: flex;
+}
+
+.profile-second-cont {
+  margin: -20px 10px 40px 10px;
+}
+
+.profile-second-cont h1 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #262626;
+  font-weight: bold !important;
+}
+.profile-second-cont p {
+  font-size: 15px;
+  margin: 5px 0px;
+  line-height: 22px;
+}
+.profile-second-cont > *:first-child {
+  font-weight: normal;
+}
+
+.profile-story-image {
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  padding: 2px;
+}
+
+.profile-third-cont {
+  margin: 30px 10px;
+}
+
+.profile-fourth-cont ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 4px;
+}
+.profile-fourth-cont h1 {
+  font-size: 20px;
+  margin: 20px 10px;
+}
+
+.profile-fourth-cont {
+  margin: 20px 0px;
+}
+
+.profile-post-img {
+  width: 100%;
+}
+.desktop-profile-view {
+  display: none;
+}
+
+.profile-posts-heading-box {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.mobile-view {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-body-cont {
+    margin: auto;
+  }
+  .profile-img-cont img {
+    width: 180px;
+    border-radius: 50%;
+  }
+  .profile-body {
+    margin: 10px auto;
+    width: 70%;
+  }
+
+  .profile-first-cont {
+    width: 70%;
+  }
+  .data-lists li p {
+    flex-direction: row;
+    display: flex;
+    gap: 5px;
+  }
+  .profile-first-cont ul {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    /* margin-left: 10px; */
+    margin: 15px 10px;
+  }
+  .desktop-profile-view {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .profile-img-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-view {
+    display: none;
+  }
+  .profile-second-cont {
+    margin-top: 10px;
+  }
+  .desktop-right-view {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,39 @@
+.story-image {
+  margin: 0px auto;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+.story-cont {
+  width: 80%;
+  max-width: 1100px;
+  margin-top: 10px;
+  margin: 10px auto;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-item p {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.slick-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stories-loader {
+  position: absolute;
+}
