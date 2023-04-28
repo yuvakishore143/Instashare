@@ -1,10 +1,16 @@
-.search-page {
+.search-cont {
   width: 80%;
   margin: auto;
 }
 
-.search-page h1 {
+.search-cont h1 {
   margin: 20px 0px;
   font-size: 20px;
   font-weight: normal;
+}
+.search-cont ul {
+  box-shadow: 0px 4px 16px rgba(123, 135, 148, 0.16);
+}
+
+.search-page {
 }

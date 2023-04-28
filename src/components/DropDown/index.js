@@ -74,7 +74,7 @@ const DropDown = props => {
           }}
           className="header-search-btn"
           type="button"
-          // testid="searchIcon"
+          //   testid="searchIcon"
         >
           <FaSearch />
         </button>

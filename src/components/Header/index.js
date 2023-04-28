@@ -51,6 +51,9 @@ class Header extends Component {
                       src="https://res.cloudinary.com/dxqbhqv2h/image/upload/v1682483752/Standard_Collection_8_lf1cwh.png"
                       alt="website logo"
                       className="header-logo"
+                      onClick={() => {
+                        onSearchFetching('')
+                      }}
                     />
                   </Link>
                   <h1>Insta Share</h1>

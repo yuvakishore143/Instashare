@@ -36,3 +36,27 @@
     margin: auto;
   }
 }
+
+/* {/* <div className="search-page">
+                        <h1>Search Results</h1>
+                        {posts.length === 0 ? (
+                          <div className="no-search-found">
+                            <img
+                              src="https://res.cloudinary.com/dxqbhqv2h/image/upload/v1682579953/Group_rtfv7v.png"
+                              alt="no search found"
+                            />
+                            <h1>Search Not Found</h1>
+                            <p>Try different keyword or search again</p>
+                          </div>
+                        ) : (
+                          <ul>
+                            {posts.map(item => (
+                              <HomePost
+                                id={item.post_id}
+                                key={item.post_id}
+                                post={item}
+                              />
+                            ))}
+                          </ul>
+                        )}
+                      </div> */

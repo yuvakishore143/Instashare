@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner'
 
 import ProfileBody from '../ProfileBody'
 import Failure from '../Failure'
+import Header from '../Header'
 
 class UserProfile extends Component {
   state = {status: '', details: {}}
@@ -63,7 +64,12 @@ class UserProfile extends Component {
         {(() => {
           switch (status) {
             case 'Success':
-              return <ProfileBody val="user" details={details} />
+              return (
+                <div>
+                  <Header />
+                  <ProfileBody val="user" details={details} />
+                </div>
+              )
             case 'Loading':
               return (
                 <div className="loader-container">

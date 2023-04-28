@@ -74,7 +74,7 @@ const ProfileBody = props => {
         </div>
       </div>
 
-      {/* <div className="desktop-profile-view ">
+      <div className="desktop-profile-view ">
         <div className="profile-first-cont">
           <div className="profile-img-cont ">
             <img src={profilePic} alt={`${val} profile`} />
@@ -88,7 +88,7 @@ const ProfileBody = props => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <ul className="profile-third-cont">
         <Slider {...settings}>
           {stories.map(story => (

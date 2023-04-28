@@ -9,19 +9,50 @@ import Failure from '../Failure'
 import './index.css'
 
 class Search extends Component {
-  state = {status: '', search: '', posts: []}
+  state = {status: '', posts: []}
+
+  componentDidMount() {
+    this.onSearchFetching()
+  }
+
+  onSearchFetching = async () => {
+    const {val} = this.props
+    this.setState({status: 'Loading'})
+    const token = Cookies.get('jwt_token')
+    const object = {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+    let response = await fetch(
+      `https://apis.ccbp.in/insta-share/posts?search=${val}`,
+      object,
+    )
+
+    if (response.ok === true) {
+      response = await response.json()
+      this.setState({
+        status: 'Success',
+        posts: response.posts,
+      })
+    } else {
+      this.setState({status: 'Failure'})
+    }
+  }
 
   render() {
     const {posts, search, status} = this.state
+    console.log(posts)
     return (
       <InstaContext.Consumer>
         {value => {
           const {searchPosts, searchStatus} = value
-          console.log(searchPosts)
+
           return (
-            <div>
+            <div className="search-page">
               {(() => {
-                switch (searchStatus) {
+                switch (status) {
                   case 'Loading':
                     return (
                       <div className="loader-container">
@@ -33,12 +64,11 @@ class Search extends Component {
                         />
                       </div>
                     )
-
                   case 'Success':
                     return (
-                      <div className="search-page">
+                      <div className="search-cont">
                         <h1>Search Results</h1>
-                        {searchPosts.length === 0 ? (
+                        {posts.length === 0 ? (
                           <div className="no-search-found">
                             <img
                               src="https://res.cloudinary.com/dxqbhqv2h/image/upload/v1682579953/Group_rtfv7v.png"
@@ -48,21 +78,22 @@ class Search extends Component {
                             <p>Try different keyword or search again</p>
                           </div>
                         ) : (
-                          <ul>
-                            {searchPosts.map(item => (
-                              <HomePost
-                                id={item.post_id}
-                                key={item.post_id}
-                                post={item}
-                              />
+                          <ul className="Posts-container-search">
+                            {posts.map(each => (
+                              <HomePost post={each} key={each.postId} />
                             ))}
                           </ul>
                         )}
                       </div>
                     )
-
                   case 'Failure':
-                    return <Failure />
+                    return (
+                      <Failure
+                        func={() => {
+                          this.onSearchFetching(search)
+                        }}
+                      />
+                    )
 
                   default:
                     return null

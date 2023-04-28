@@ -73,16 +73,11 @@ class Home extends Component {
     )
   }
 
-  //   searchStatusChange = val => {
-  //     this.setState({searchView: val})
-  //   }
-
   render() {
-    const {search} = this.state
     return (
       <InstaContext.Consumer>
         {value => {
-          const {searchView, searchPosts} = value
+          const {searchView, searchVal} = value
           return (
             <div className="home-page">
               <div className="home-min-page">
@@ -97,7 +92,7 @@ class Home extends Component {
                     </>
                   ) : (
                     <div>
-                      <Search />
+                      <Search val={searchVal} />
                     </div>
                   )}
                 </div>

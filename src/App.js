@@ -12,55 +12,29 @@ import NotFound from './components/NotFound'
 import InstaContext from './Context/InstaContext'
 
 class App extends Component {
-  state = {searchPosts: [], searchStatus: '', searchView: false}
+  state = {searchPosts: [], searchVal: '', searchView: false}
 
-  onSearchFetching = async val => {
+  onSearchFetching = val => {
     if (val === '') {
       this.setState({searchView: false})
     } else {
-      this.setState({searchStatus: 'Loading', searchView: true})
-      const token = Cookies.get('jwt_token')
-      const object = {
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-      let response = await fetch(
-        `https://apis.ccbp.in/insta-share/posts?search=${val}`,
-        object,
-      )
-
-      if (response.ok === true) {
-        response = await response.json()
-        this.setState({
-          searchStatus: 'Success',
-          searchPosts: response.posts,
-          searchView: true,
-        })
-      } else {
-        this.setState({searchStatus: 'Failure', searchView: true})
-      }
+      this.setState({searchView: true, searchVal: val})
     }
   }
 
-  //   onSearchFetching = () => {
-  //     this.setState({searchView: true})
-  //   }
-
   render() {
-    const {searchPosts, searchStatus, searchView} = this.state
+    const {searchPosts, searchVal, searchView} = this.state
     console.log(searchPosts)
     return (
       <InstaContext.Provider
         value={{
           searchPosts,
           onSearchFetching: this.onSearchFetching,
-          searchStatus,
           searchView,
+          searchVal,
         }}
       >
-        <div>
+        <div className="app">
           <Switch>
             <Route exact path="/login" component={Login} />
             <ProtectedRoute exact path="/" component={Home} />
