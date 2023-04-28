@@ -17,7 +17,7 @@ li {
   display: flex;
   align-items: center;
   gap: 10px;
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .header-first-part h1 {
@@ -48,7 +48,7 @@ li {
   display: flex;
   gap: 10px;
   align-items: center;
-  transform: translateY(10px);
+  transform: translateY(7px);
 }
 .header-logo-cont h1 {
   text-decoration: none;
